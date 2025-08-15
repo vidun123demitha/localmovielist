@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DC · Live-Action Films</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="header">
+  <nav class="nav container">
+    <div class="brand">
+      <div class="brand-badge"></div>
+      <span>Film & Series Archive</span>
+    </div>
+    <div>
+      <a class="link" href="index.html">Home</a>
+      <a class="link" href="films.html">Films</a>
+      <a class="link" href="series.html">Series</a>
+      <a class="link" href="cinematic-secrets.html">Cinematic Secrets</a> <a class="btn" href="all-in-one.html">All Titles</a>
+    </div>
+  </nav>
+</header>
+<div class="container">
+
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a> › <a href="films.html">Films</a> ›
+      <a href="live-action-films.html">Live-Action Films</a> › <span>DC</span>
+    </div>
+    <div class="page-title"><h2>DC</h2></div>
+    <div class="toolbar">
+      <div class="search"><input id="q" placeholder="Search titles..." aria-label="Search titles"></div>
+      <div class="counter"><span id="count">4</span> titles</div>
+    </div>
+    <div class="list">
+      <div class="item" data-text="batman v superman dawn of justice (2016)"><div class="dot"></div><div>Batman V Superman Dawn Of Justice (2016)</div></div><div class="item" data-text="the dark knight (2008)"><div class="dot"></div><div>The Dark Knight (2008)</div></div><div class="item" data-text="the dark knight rises (2012)"><div class="dot"></div><div>The Dark Knight Rises (2012)</div></div><div class="item" data-text="wonder woman (2017)"><div class="dot"></div><div>Wonder Woman (2017)</div></div>
+    </div>
+    <script>
+      filterList('#q', '.item', '#count');
+    </script>
+    
+</div>
+<footer class="footer">
+  <div class="container">
+    © 2025 Film & Series Archive · Crafted for global audiences
+  </div>
+</footer>
+<script src="assets/scripts.js"></script>
+</body></html>

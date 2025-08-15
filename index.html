@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="header">
+  <nav class="nav container">
+    <div class="brand">
+      <div class="brand-badge"></div>
+      <span>Film & Series Archive</span>
+    </div>
+    <div>
+      <a class="link" href="index.html">Home</a>
+      <a class="link" href="films.html">Films</a>
+      <a class="link" href="series.html">Series</a>
+      <a class="link" href="cinematic-secrets.html">Cinematic Secrets</a> <a class="btn" href="all-in-one.html">All Titles</a>
+    </div>
+  </nav>
+</header>
+<div class="container">
+
+<section class="hero">
+  <div>
+    <div class="kicker">Welcome</div>
+    <h1>Explore Films & Series — elegantly organized and easy to browse.</h1>
+    <p>Professionally curated categories with clean design, fast filtering, and delightful micro-animations.</p>
+    <div class="toolbar">
+      <a class="btn" href="films.html">Browse Films</a>
+      <a class="btn" href="series.html">Browse Series</a>
+    </div>
+  </div>
+  <div class="notice">
+    Tip: Use the search bars on each category page to quickly find a title by name or year.
+  </div>
+</section>
+
+<section style="margin-top:60px; background:linear-gradient(135deg, #f0f9ff, #e0f2fe); padding:20px; border-radius:16px; box-shadow:0 8px 30px rgba(2,6,23,.08)">
+  <div class="page-title"><h2 style="color:var(--brand)">Cinematic Secrets</h2></div>
+  <p class="notice">Hover to reveal fun facts, Marvel & DC trivia, fan theories, and hidden film details.</p>
+  <div id="facts-grid" class="card-grid"></div>
+  <div style="text-align:center; margin-top:20px">
+    <a href="cinematic-secrets.html" class="btn">Discover More Secrets</a>
+  </div>
+</section>
+<script>
+fetch('assets/film_facts.json').then(r => r.json()).then(facts => {
+  facts.sort(() => Math.random() - 0.5);
+  const grid = document.getElementById('facts-grid');
+  facts.slice(0,10).forEach(fact => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    const content = document.createElement('div');
+    content.textContent = fact;
+    content.style.filter = 'blur(8px)';
+    content.style.transition = 'filter .3s ease';
+    content.style.cursor = 'pointer';
+    content.addEventListener('mouseenter', () => { content.style.filter = 'blur(0)'; });
+    content.addEventListener('mouseleave', () => { content.style.filter = 'blur(8px)'; });
+    card.appendChild(content);
+    grid.appendChild(card);
+  });
+});
+</script>
+
+
+<h2 class="page-title"><span class="kicker">Start Here</span></h2>
+<div class="card-grid">
+  <a class="card" href="all-titles.html"><h3>All Titles</h3><p>View every film and series in one searchable list.</p></a>
+  <a class="card" href="films.html">
+    <h3>Films</h3>
+    <p>Live-Action & Animated films, neatly categorized (Marvel, DC, and more).</p>
+  </a>
+  <a class="card" href="series.html">
+    <h3>Series</h3>
+    <p>Live-Action & Animated series, from K-Dramas to iconic animated shows.</p>
+  </a>
+</div>
+
+
+<section style="margin-top:60px">
+  <div class="page-title"><h2>Cinematic Secrets</h2></div>
+  <p class="notice">Hover over a card to reveal hidden film trivia, Easter eggs, and fascinating behind-the-scenes facts.</p>
+  <div id="facts-grid" class="card-grid"></div>
+</section>
+<script>
+fetch('assets/film_facts.json').then(r => r.json()).then(facts => {
+  facts.sort(() => Math.random() - 0.5); // shuffle
+  const grid = document.getElementById('facts-grid');
+  facts.forEach(fact => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.position = 'relative';
+    const content = document.createElement('div');
+    content.textContent = fact;
+    content.style.filter = 'blur(8px)';
+    content.style.transition = 'filter .3s ease';
+    content.style.cursor = 'pointer';
+    content.addEventListener('mouseenter', () => { content.style.filter = 'blur(0)'; });
+    content.addEventListener('mouseleave', () => { content.style.filter = 'blur(8px)'; });
+    card.appendChild(content);
+    grid.appendChild(card);
+  });
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    © 2025 Film & Series Archive · Crafted for global audiences
+  </div>
+</footer>
+<script src="assets/scripts.js"></script>
+</body></html>

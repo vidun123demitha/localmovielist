@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marvel · Animated Series</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="header">
+  <nav class="nav container">
+    <div class="brand">
+      <div class="brand-badge"></div>
+      <span>Film & Series Archive</span>
+    </div>
+    <div>
+      <a class="link" href="index.html">Home</a>
+      <a class="link" href="films.html">Films</a>
+      <a class="link" href="series.html">Series</a>
+      <a class="link" href="cinematic-secrets.html">Cinematic Secrets</a> <a class="btn" href="all-in-one.html">All Titles</a>
+    </div>
+  </nav>
+</header>
+<div class="container">
+
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a> › <a href="series.html">Series</a> ›
+      <a href="animated-series.html">Animated Series</a> › <span>Marvel</span>
+    </div>
+    <div class="page-title"><h2>Marvel</h2></div>
+    <div class="toolbar">
+      <div class="search"><input id="q" placeholder="Search titles..." aria-label="Search titles"></div>
+      <div class="counter"><span id="count">5</span> titles</div>
+    </div>
+    <div class="list">
+      <div class="item" data-text="marvels spider-man (2017)"><div class="dot"></div><div>Marvels Spider-Man (2017)</div></div><div class="item" data-text="ultimate spider-man (2012)"><div class="dot"></div><div>Ultimate Spider-Man (2012)</div></div><div class="item" data-text="the avengers earths mightiest heroes (2010)"><div class="dot"></div><div>The Avengers Earths Mightiest Heroes (2010)</div></div><div class="item" data-text="what if (2021)"><div class="dot"></div><div>What If (2021)</div></div><div class="item" data-text="what if season 2 (2023)"><div class="dot"></div><div>What If Season 2 (2023)</div></div>
+    </div>
+    <script>
+      filterList('#q', '.item', '#count');
+    </script>
+    
+</div>
+<footer class="footer">
+  <div class="container">
+    © 2025 Film & Series Archive · Crafted for global audiences
+  </div>
+</footer>
+<script src="assets/scripts.js"></script>
+</body></html>
